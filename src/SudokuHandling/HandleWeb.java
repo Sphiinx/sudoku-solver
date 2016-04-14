@@ -14,9 +14,15 @@ public class HandleWeb {
 
     public static WebDriver driver;
 
+    /**
+     * Opens the website with the given String.
+     *
+     * @param website The website to open.
+     */
     public static void openWebsite(String website) {
         driver = new FirefoxDriver();
         driver.get(website);
+        driver.manage().window().maximize();
     }
 
     /**
