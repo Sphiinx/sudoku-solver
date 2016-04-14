@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SudokuSolver:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SudokuSolver_jar</output-path>
+    <root id="archive" name="SudokuSolver.jar">
+      <element id="module-output" name="SudokuSolver" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Selenium/selenium-2.53.0/selenium-java-2.53.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Selenium/selenium-2.53.0/selenium-server-standalone-2.53.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
