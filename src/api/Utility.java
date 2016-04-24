@@ -1,7 +1,7 @@
-package util;
+package api;
 
 /**
- * Created by Sphiinx on 4/13/2016.
+ * Created by Sphiinx on 4/23/2016.
  */
 public class Utility {
 

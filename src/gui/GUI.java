@@ -1,6 +1,6 @@
 package gui;
 
-import data.Variables;
+import data.Vars;
 
 import javax.swing.*;
 
@@ -117,8 +117,8 @@ public class GUI extends javax.swing.JFrame {
     }// </editor-fold>
 
     private void startActionPerformed() {
-        Variables.numberToSolve = Integer.parseInt(numberToSolve.getValue().toString());
-        Variables.guiComplete = true;
+        Vars.get().numberToSolve = Integer.parseInt(numberToSolve.getValue().toString());
+        Vars.get().guiComplete = true;
     }
 
 }

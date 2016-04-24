@@ -2,35 +2,40 @@
  * Created by Sphiinx on 4/12/2016.
  */
 
-import SudokuHandling.HandleWeb;
-import data.Variables;
+import api.HandleWeb;
+import data.Vars;
 import framework.Task;
+import framework.TaskManager;
 import gui.GUI;
+import tasks.EndProgram;
+import tasks.GetWebMatrix;
+import tasks.WriteWebMatrix;
 
 import java.awt.*;
 
 public class Main {
 
+    private static TaskManager taskManager = new TaskManager();
     private static GUI gui = new GUI();
 
-    public static void main(String[] args) throws InterruptedException {
-        Collection.addCollection();
+    public static void main(String[] args) throws InterruptedException, AWTException {
+        addCollection();
         initializeGUI();
-        HandleWeb.openWebsite("http://www.sudoku.com");
+        HandleWeb.openURL("http://www.sudoku.com");
         loop();
     }
 
-    private static void loop() {
-        while (!Variables.stopProgram) {
-            Collection.tasks.stream().filter(Task::validate).forEach(task -> {
-                Variables.status = task.toString();
+    private static void addCollection() {
+        taskManager.addTask(new GetWebMatrix(), new WriteWebMatrix(), new EndProgram());
+    }
+
+    private static void loop() throws InterruptedException, AWTException {
+        while (!Vars.get().stopProgram) {
+            Task task = taskManager.getValidTask();
+            if (task != null) {
                 task.execute();
-                try {
-                    Thread.sleep(150);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            });
+                Thread.sleep(100);
+            }
         }
     }
 
@@ -45,7 +50,7 @@ public class Main {
         });
         do
             Thread.sleep(10);
-        while (!Variables.guiComplete);
+        while (!Vars.get().guiComplete);
     }
 
 }

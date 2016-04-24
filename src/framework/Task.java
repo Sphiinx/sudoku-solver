@@ -1,15 +1,17 @@
 package framework;
 
+import java.awt.*;
+
 /**
- * Created by Sphiinx on 4/13/2016.
+ * Created by Sphiinx on 4/20/2016.
  */
-public abstract class Task {
+public interface Task {
 
-    public abstract void execute();
+    boolean validate();
 
-    public abstract String toString();
+    void execute() throws InterruptedException, AWTException;
 
-    public abstract boolean validate();
+    String toString();
 
 }
 

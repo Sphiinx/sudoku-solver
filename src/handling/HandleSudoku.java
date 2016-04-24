@@ -1,6 +1,6 @@
-package SudokuHandling;
+package handling;
 
-import data.Variables;
+import data.Vars;
 
 /**
  * Created by Sphiinx on 4/13/2016.
@@ -8,7 +8,7 @@ import data.Variables;
 public class HandleSudoku {
 
     /**
-     * Solves the given Sudoku in place.
+     * Solves the given HandleSudoku in place.
      *
      * @param i     The vertical position to start.
      * @param j     The horizontal position to start.
@@ -99,7 +99,7 @@ public class HandleSudoku {
     public static void resetMatrix() {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                Variables.matrix[i][j] = 0;
+                Vars.get().matrix[i][j] = 0;
             }
         }
     }

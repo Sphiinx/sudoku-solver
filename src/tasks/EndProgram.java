@@ -1,13 +1,13 @@
 package tasks;
 
-import SudokuHandling.HandleWeb;
-import data.Variables;
-import framework.Task;
+import api.HandleWeb;
+import data.Vars;
+import framework.AbstractTask;
 
 /**
  * Created by Sphiinx on 4/13/2016.
  */
-public class EndProgram extends Task {
+public class EndProgram extends AbstractTask {
 
     @Override
     public void execute() {
@@ -16,13 +16,8 @@ public class EndProgram extends Task {
     }
 
     @Override
-    public String toString() {
-        return "Ending program...";
-    }
-
-    @Override
     public boolean validate() {
-        return Variables.solved >= Variables.numberToSolve;
+        return Vars.get().solved >= Vars.get().numberToSolve;
     }
 }
 
