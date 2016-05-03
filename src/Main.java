@@ -31,6 +31,7 @@ public class Main {
 
     private static void loop() throws InterruptedException, AWTException {
         while (!Vars.get().stopProgram) {
+            System.out.println("Test");
             Task task = taskManager.getValidTask();
             if (task != null) {
                 task.execute();
