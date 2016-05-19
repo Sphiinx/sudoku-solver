@@ -12,7 +12,11 @@ Once solved it filters through ever box filling out the puzzle.
 
 ### Version
 0.1
-* Release version
+```sh
+- Release Version
+```
 0.2
-* - Removed a useless Abstract Class.
-* - Added an enum so the difficulty can easily be changed.
+```sh
+- Removed a useless Abstract Class.
+- Added an enum so the difficulty can easily be changed.
+```
