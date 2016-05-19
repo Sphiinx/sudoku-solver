@@ -2,18 +2,16 @@ package tasks;
 
 
 import api.HandleWeb;
-import framework.AbstractTask;
+import framework.Task;
 import handling.HandleSudoku;
-import handling.Web;
+import handling.website.Web;
 import data.Vars;
 
 /**
  * Created by Sphiinx on 4/13/2016.
  */
-public class WriteWebMatrix extends AbstractTask {
+public class WriteWebMatrix implements Task {
 
-
-    @Override
     public void execute() {
         if (!Web.isGameOpen("//*[@id=\"game\"]"))
             return;
@@ -32,7 +30,6 @@ public class WriteWebMatrix extends AbstractTask {
         HandleSudoku.resetMatrix();
     }
 
-    @Override
     public boolean validate() {
         int cells = 0;
         for (int i = 0; i < 9; i++) {

@@ -7,20 +7,20 @@ import java.util.ArrayList;
  */
 public class TaskManager {
 
-    private ArrayList<AbstractTask> taskList = new ArrayList<>();
+    private ArrayList<Task> taskList = new ArrayList<>();
     private String status;
 
-    public void addTask(final AbstractTask... tasks) {
-        for (AbstractTask abstractTask : tasks) {
-            if (!taskList.contains(abstractTask)) {
-                taskList.add(abstractTask);
+    public void addTask(final Task... tasks) {
+        for (Task task : tasks) {
+            if (!taskList.contains(task)) {
+                taskList.add(task);
             }
         }
     }
 
-    public void removeTask(AbstractTask abstractTask) {
-        if (taskList.contains(abstractTask)) {
-            taskList.remove(abstractTask);
+    public void removeTask(Task task) {
+        if (taskList.contains(task)) {
+            taskList.remove(task);
         }
     }
 
@@ -32,10 +32,10 @@ public class TaskManager {
         return taskList.size();
     }
 
-    public AbstractTask getValidTask() {
-        for (AbstractTask abstractTask : taskList) {
-            if (abstractTask.validate()) {
-                return abstractTask;
+    public Task getValidTask() {
+        for (Task task : taskList) {
+            if (task.validate()) {
+                return task;
             }
         }
         return null;

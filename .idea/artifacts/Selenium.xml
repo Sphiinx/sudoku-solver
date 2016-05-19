@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Selenium">
+    <output-path>$PROJECT_DIR$/out/artifacts/Selenium</output-path>
+    <root id="archive" name="Selenium.jar">
+      <element id="library" level="project" name="selenium-java-2.53.0" />
+    </root>
+  </artifact>
+</component>
