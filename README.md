@@ -11,4 +11,8 @@ Once solved it filters through ever box filling out the puzzle.
 * Solves the expert puzzles.
 
 ### Version
-* 0.1
+0.1
+* Release version
+0.2
+* - Removed a useless Abstract Class.
+* - Added an enum so the difficulty can easily be changed.
