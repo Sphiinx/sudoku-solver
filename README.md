@@ -10,12 +10,12 @@ Once solved it filters through ever box filling out the puzzle.
 * Solves the puzzles in less than a millisecond.
 * Solves the expert puzzles.
 
-### Version
-0.1
+### Versions
+**0.1 - 4/13/2016**
 ```sh
 - Release Version
 ```
-0.2
+**0.2 - 5/19/2016**
 ```sh
 - Removed a useless Abstract Class.
 - Added an enum so the difficulty can easily be changed.
