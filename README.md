@@ -11,12 +11,12 @@ Once solved it filters through all of the boxes filling out the puzzle.
 * Solves the expert puzzles.
 
 ### Versions
-**0.1 - 4/13/2016**
-```sh
-- Release Version
-```
 **0.2 - 5/19/2016**
-```sh
+```
 - Removed a useless Abstract Class.
 - Added an enum so the difficulty can easily be changed.
+```
+**0.1 - 4/13/2016**
+```
+- Release Version
 ```
